@@ -193,17 +193,26 @@
 </template>
 
 <script>
+import {Userdetails} from '../UserDetail/UserDetail'
 export default {
     name:'Template1',
     data(){
         return{
-          userDetail:JSON.parse(sessionStorage.getItem('userDetail'))
+          userDetail:{}
         }
     },
     methods:{
 
     },
     mounted(){
+      // console.log(sessionStorage.getItem('userDetail'))
+      if(sessionStorage.getItem('userDetail')){
+        // console.log('1')
+        this.userDetail=JSON.parse(sessionStorage.getItem('userDetail'))
+      }
+      else{
+        this.userDetail=Userdetails[0].userDetail
+      }
 
     }
 }

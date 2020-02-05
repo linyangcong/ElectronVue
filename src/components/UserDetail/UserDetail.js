@@ -84,7 +84,6 @@ exports.Userdetails=[
                 FromDate:'2019.12',
                 ToDate:'今',
                 DoWhat:'H5聊天网页（前端，服务器，数据库）',
-
                 Github:{
                     HTML5:'https://github.com/linyangcong/HeartBeatFont',
                     Node:'https://github.com/linyangcong/HeartBeatServer',
