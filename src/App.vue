@@ -1,23 +1,30 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  mounted(){
+    document.getElementById('app').style.height=document.documentElement.clientHeight+'px'
+    document.getElementById('app').style.width=document.documentElement.clientWidth+'px'
+
+    // console.log(document.documentElement.clientHeight)
+    // console.log(document.documentElement.clientWidth)
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+    margin: 0px;
+    padding: 0px;
 }
+/* #app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+} */
 </style>
